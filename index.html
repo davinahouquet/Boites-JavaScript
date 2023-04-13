@@ -13,6 +13,8 @@
         <div id="board"></div>
 
         <script>
+
+    
           function schuffleChildren(parent){
             let children = parent.children
             let i = board.children.length, k, temp
@@ -37,10 +39,12 @@
           box.classList.add("box")
 
           const board = document.querySelector("#board")
-        
+
+          const nbBox = prompt("Entrez le nombre de boîtes souhaité :" )
+
           let nb = 1 /*on déclare une variable nb qui représentera le numéro de la boite attendue et qui s'incrémentera en cas de clic valide ! */
 
-          for(let i = 1; i <= 10; i++){
+          for(let i = 1; i <= nbBox; i++){
             const newbox = box.cloneNode()
             newbox.innerText = i
             board.appendChild(newbox)
